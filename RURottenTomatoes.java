@@ -18,7 +18,6 @@ public class RURottenTomatoes {
 	int[][] matrix= new int [x][y];
 
 	int pointer = 2;
-
 	for (int i = 0; i < x; i++) {
 		for (int j = 0; j < y; j++) {
 			matrix[i][j] = Integer.parseInt(args[pointer]);
@@ -30,17 +29,14 @@ public class RURottenTomatoes {
 	int movie_index = 0;
 
 	for (int j = 0; j < y; j++) {
-
 		int sum = 0;
 		for(int i = 0; i < x; i++){
 			sum += matrix[i][j];
 		}
-
 		if(sum > max_score){
 			max_score = sum;
 			movie_index = j;
 		}
-
 	}
 	System.out.println(movie_index);
 	}
